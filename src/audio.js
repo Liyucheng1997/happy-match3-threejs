@@ -20,6 +20,13 @@ export function unlock() {
   startMusic();
 }
 
+// 页面切到后台时暂停所有声音，回到前台恢复
+document.addEventListener('visibilitychange', () => {
+  if (!ctx) return;
+  if (document.hidden) ctx.suspend();
+  else ctx.resume();
+});
+
 export function setMuted(m) {
   muted = m;
   if (master) master.gain.setTargetAtTime(m ? 0 : 1, ctx.currentTime, 0.02);
