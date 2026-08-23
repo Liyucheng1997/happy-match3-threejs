@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>开心消消乐 · Three.js</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="panel">
+      <div class="title">开心消消乐</div>
+      <div class="row"><span>分数</span><b id="score">0</b></div>
+      <div class="row"><span>步数</span><b id="moves">20</b></div>
+      <div class="row"><span>连击</span><b id="combo">-</b></div>
+      <button id="restart">重新开始</button>
+      <button id="mute" class="secondary">🔊 声音开</button>
+      <div class="hint">点击一个宝石，再点击相邻宝石交换，三个及以上同色连成一线即可消除</div>
+    </div>
+  </div>
+  <div id="overlay" class="hidden">
+    <div class="card">
+      <h1>游戏结束</h1>
+      <p>最终得分：<b id="final-score">0</b></p>
+      <button id="play-again">再来一局</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

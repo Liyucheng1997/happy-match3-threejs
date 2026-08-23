@@ -1,0 +1,19 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #0f0c29; font-family: "Segoe UI", "Microsoft YaHei", sans-serif; color: #fff; }
+canvas { display: block; }
+#hud { position: fixed; top: 16px; left: 16px; z-index: 10; pointer-events: none; }
+.panel { background: rgba(20, 16, 50, 0.75); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 16px 20px; min-width: 200px; pointer-events: auto; }
+.title { font-size: 22px; font-weight: 700; margin-bottom: 10px; background: linear-gradient(90deg, #ffd86f, #fc6262, #c471ed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.row { display: flex; justify-content: space-between; font-size: 16px; margin: 6px 0; }
+.row b { font-size: 18px; color: #ffd86f; }
+#restart, #play-again { margin-top: 10px; width: 100%; padding: 8px 0; border: none; border-radius: 8px; background: linear-gradient(90deg, #fc6262, #c471ed); color: #fff; font-size: 15px; cursor: pointer; }
+#restart:hover, #play-again:hover { filter: brightness(1.15); }
+.hint { margin-top: 10px; font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+#overlay { position: fixed; inset: 0; z-index: 20; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); }
+#overlay.hidden { display: none; }
+.card { background: rgba(30, 24, 70, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 32px 48px; text-align: center; }
+.card h1 { margin-bottom: 12px; }
+.card p { font-size: 18px; }
+.card b { color: #ffd86f; font-size: 26px; }
+
+#mute.secondary { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); margin-top: 8px; }
